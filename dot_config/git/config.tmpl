@@ -1,0 +1,23 @@
+[core]
+	whitespace = fix,trailing-space,crs-at-eol
+	editor = flatpak run org.small_tech.Gnomit
+[credential]
+	helper = libsecret
+[alias]
+	ra = remote add
+	rn = remote rename
+	st = status
+	ci = commit --verbose
+	cia = commit --verbose --all
+	co = checkout
+	df = diff
+	lg = log --graph --date=short
+[pull]
+	ff = only
+[commit]
+	gpgsign = true
+[user]
+	email = {{ .email }}
+	name = {{ .name }}
+[format]
+	signoff = true

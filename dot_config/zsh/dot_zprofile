@@ -1,0 +1,5 @@
+# Path
+typeset -U path
+path=(${path[@]:#*$USER/bin}) # Removes $USER/bin if found
+path+=(~/.local/bin $XDG_DATA_HOME/cargo/bin)
+export path

@@ -1,0 +1,10 @@
+# Use ~/.config/environment.d/*.conf for environment variables
+ENVIRONMENTD="$HOME/.config/environment.d"
+set -a
+if [[ -d $ENVIRONMENTD ]]; then
+	for conf in "$ENVIRONMENTD"/*.conf; do
+		source "$conf"
+	done
+fi
+set +a
+unset ENVIRONMENTD
