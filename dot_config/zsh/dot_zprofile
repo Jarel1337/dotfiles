@@ -1,5 +1,3 @@
-# Path
-typeset -U path
-path=(${path[@]:#*$USER/bin}) # Removes $USER/bin if found
+typeset -U path # Make path entries unique.
 path+=(~/.local/bin $XDG_DATA_HOME/cargo/bin)
 export path
