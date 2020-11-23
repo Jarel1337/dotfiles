@@ -14,6 +14,11 @@ HISTFILE="$XDG_CACHE_HOME/zsh/history"
 HISTSIZE=1000
 SAVEHIST=1000
 
+autoload -Uz compinit
+zstyle ':completion:*' menu select rehash true
+zmodload zsh/complist
+compinit -d "$XDG_CACHE_HOME/zsh/compdump"
+
 source "$XDG_CONFIG_HOME/shell/aliasrc"
 
 source "$XDG_DATA_HOME/zsh/powerlevel10k/powerlevel10k.zsh-theme"
