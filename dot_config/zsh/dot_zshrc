@@ -5,8 +5,19 @@ if [[ -r "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+setopt auto_cd
+setopt hist_ignore_all_dups
+setopt interactive_comments
+setopt share_history
+
+HISTFILE="$XDG_CACHE_HOME/zsh/history"
+HISTSIZE=1000
+SAVEHIST=1000
+
+source "$XDG_CONFIG_HOME/shell/aliasrc"
+
 source "$XDG_DATA_HOME/zsh/powerlevel10k/powerlevel10k.zsh-theme"
 source "$XDG_DATA_HOME/zsh/fsh/fast-syntax-highlighting.plugin.zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit $ZDOTDIR/.p10k.zsh.
+[[ -r "$ZDOTDIR/.p10k.zsh" ]] && source "$ZDOTDIR/.p10k.zsh"
