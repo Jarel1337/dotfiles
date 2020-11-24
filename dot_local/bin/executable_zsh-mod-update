@@ -3,14 +3,18 @@
 readonly ZMOD_DIR="$XDG_DATA_HOME/zsh"
 
 check_dir_and_pull(){
-	if [[ -d "$ZMOD_DIR/$1" ]]; then
-		 git -C "$ZMOD_DIR/$1" pull --depth=1
+	if [[ -d "$ZMOD_DIR"/$1 ]]; then
+		if [[ -d "$ZMOD_DIR"/$1/.git ]]; then
+			git -C "$ZMOD_DIR"/$1 pull --depth=1
+		else
+			echo "$ZMOD_DIR"/$1 is not a git repo, skipping...
+		fi
 	else
-		echo "$ZMOD_DIR/$1" is not a directory, skipping
+		echo "$ZMOD_DIR"/$1 is not a directory, skipping...
 	fi
 }
 
-for i in powerlevel10k fsh test; do
+for i in powerlevel10k fsh; do
 	check_dir_and_pull $i &
 done
 
