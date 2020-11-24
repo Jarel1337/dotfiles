@@ -14,6 +14,7 @@ HISTFILE="$XDG_CACHE_HOME/zsh/history"
 HISTSIZE=1000
 SAVEHIST=1000
 
+[[ ! -f "$XDG_CACHE_HOME/zsh/compdump" ]] && touch "$XDG_CACHE_HOME/zsh/compdump"
 autoload -Uz compinit
 zstyle ':completion:*' menu select rehash true
 zmodload zsh/complist
