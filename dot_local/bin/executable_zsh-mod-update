@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+readonly ZMOD_DIR="$XDG_DATA_HOME/zsh"
+
+check_dir_and_pull(){
+[[ -d "$ZMOD_DIR/$1" ]] && git -C "$ZMOD_DIR/$1" pull --depth=1 || echo $ZMOD_DIR/$1 is not a directory, skipping
+}
+
+for i in powerlevel10k fsh; do
+check_dir_and_pull $i &
+done
+
+wait
