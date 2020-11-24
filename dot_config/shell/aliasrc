@@ -1,2 +1,5 @@
 alias \
-	la="ls -la"
+	la="ls -la" \
+	lh="ls -hAl" \
+	l="ls -l" \
+	da="du -sch"
