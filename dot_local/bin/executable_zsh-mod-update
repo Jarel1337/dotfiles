@@ -5,7 +5,7 @@ readonly ZMOD_DIR="$XDG_DATA_HOME/zsh"
 check_dir_and_pull(){
 	if [[ -d "$ZMOD_DIR"/$1 ]]; then
 		if [[ -d "$ZMOD_DIR"/$1/.git ]]; then
-			git -C "$ZMOD_DIR"/$1 pull --depth=1
+			git -C "$ZMOD_DIR"/$1 pull --depth=1 --rebase
 		else
 			echo "$ZMOD_DIR"/$1 is not a git repo, skipping...
 		fi
