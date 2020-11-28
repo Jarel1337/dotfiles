@@ -16,9 +16,12 @@ setopt hist_ignore_all_dups
 setopt interactive_comments
 setopt share_history
 
+# Enable emacs mode (ctrl-A/E (jump to beginning/end of line) + ctrl-R (backwards search))
+bindkey -e
+
 HISTFILE="$XDG_CACHE_HOME/zsh/history"
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 
 [[ ! -f "$XDG_CACHE_HOME/zsh/compdump" ]] && touch "$XDG_CACHE_HOME/zsh/compdump"
 autoload -Uz compinit
