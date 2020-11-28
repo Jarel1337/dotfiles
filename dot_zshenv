@@ -1,3 +1,5 @@
+# Remove duplicates in path
+typeset -U path PATH
 # Use ~/.config/environment.d/*.conf for environment variables
 ENVIRONMENTD="$HOME/.config/environment.d"
 set -a
