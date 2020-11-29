@@ -18,6 +18,9 @@ setopt share_history
 
 # Enable emacs mode (ctrl-A/E (jump to beginning/end of line) + ctrl-R (backwards search))
 bindkey -e
+# Enable ctrl left right arrow to jump between words
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 HISTFILE="$XDG_CACHE_HOME/zsh/history"
 HISTSIZE=10000
