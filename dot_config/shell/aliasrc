@@ -3,3 +3,5 @@ alias \
 	lh="ls -hAl" \
 	l="ls -l" \
 	da="du -sch"
+alias \
+	vi="nvim"
