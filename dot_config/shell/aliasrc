@@ -1,7 +1,11 @@
-alias \
-	la="ls -la" \
-	lh="ls -hAl" \
-	l="ls -l" \
-	da="du -sch"
-alias \
-	vi="nvim"
+# Lines starting with a "#" get ignored
+# Entries should NOT be quoted
+cat=bat
+da=du -sch
+grep=grep --color=auto
+ip=ip -c=auto
+l=ls -l
+la=ls -la
+lh=ls -hAl
+ls=ls --color=auto
+vi=nvim

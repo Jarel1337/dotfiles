@@ -1,8 +1,6 @@
 # There's currently no good way to distribute this with chezmoi so just check if non-exists & clone for now
-ZMOD_DIR="$XDG_DATA_HOME/zsh"
-[[ ! -d "$ZMOD_DIR"/fsh ]] && git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting "$ZMOD_DIR"/fsh
-[[ ! -d "$ZMOD_DIR"/powerlevel10k ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k "$ZMOD_DIR"/powerlevel10k
-unset ZMOD_DIR
+[[ ! -d "$XDG_DATA_HOME/zsh"/fsh ]] && git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting "$ZMOD_DIR"/fsh
+[[ ! -d "$XDG_DATA_HOME/zsh"/powerlevel10k ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k "$ZMOD_DIR"/powerlevel10k
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -32,7 +30,13 @@ zstyle ':completion:*' menu select rehash true
 zmodload zsh/complist
 compinit -d "$XDG_CACHE_HOME/zsh/compdump"
 
-source "$XDG_CONFIG_HOME/shell/aliasrc"
+# Alias setup :)
+while IFS='=' read -r key val; do
+	[[ ${key##\#*} ]] || continue
+	alias_list+=($key=$val )
+done < "$XDG_CONFIG_HOME"/shell/aliasrc
+alias $alias_list
+unset alias_list
 
 source "$XDG_DATA_HOME/zsh/powerlevel10k/powerlevel10k.zsh-theme"
 source "$XDG_DATA_HOME/zsh/fsh/fast-syntax-highlighting.plugin.zsh"
