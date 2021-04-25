@@ -12,3 +12,6 @@ Insert name and email into `~/.config/chezmoi/chezmoi.toml`:
         name = "Vilgot Fredenberg"
 ```
 Then execute `chezmoi init --apply vilgotf`
+
+### Neovim
+Install neovim pluggins by issuing :PaqInstall
