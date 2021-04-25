@@ -14,4 +14,4 @@ Insert name and email into `~/.config/chezmoi/chezmoi.toml`:
 Then execute `chezmoi init --apply vilgotf`
 
 ### Neovim
-Install neovim pluggins by issuing :PaqInstall
+Install neovim pluggins by issuing `:PaqInstall`
