@@ -8,4 +8,5 @@ l=ls -l
 la=ls -la
 lh=ls -hAl
 ls=ls --color=auto
-vi=nvim
+vi=vim
+vim=nvim
