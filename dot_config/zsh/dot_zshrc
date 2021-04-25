@@ -1,7 +1,3 @@
-# There's currently no good way to distribute this with chezmoi so just check if non-exists & clone for now
-[[ ! -d "$XDG_DATA_HOME/zsh"/fsh ]] && git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting "$ZMOD_DIR"/fsh
-[[ ! -d "$XDG_DATA_HOME/zsh"/powerlevel10k ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k "$ZMOD_DIR"/powerlevel10k
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
