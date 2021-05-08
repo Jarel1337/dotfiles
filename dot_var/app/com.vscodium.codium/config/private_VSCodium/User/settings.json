@@ -1,0 +1,17 @@
+{
+    "editor.lineNumbers": "relative",
+    "editor.formatOnSave": true,
+    "git.autofetch": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "window.autoDetectColorScheme": true,
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.preferredDarkColorTheme": "Solarized Dark",
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "editor.fontFamily": "SauceCodePro Nerd Font, Droid Sans Mono, monospace",
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 1,
+    "window.titleBarStyle": "custom",
+    "editor.renderWhitespace": "trailing",
+}
