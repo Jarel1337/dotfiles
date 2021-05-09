@@ -1,6 +1,5 @@
 # Lines starting with a "#" get ignored
 # Entries should NOT be quoted
-cat=bat
 da=du -sch
 grep=grep --color=auto
 ip=ip -c=auto
@@ -8,5 +7,3 @@ l=ls -l
 la=ls -la
 lh=ls -hAl
 ls=ls --color=auto
-vi=vim
-vim=nvim

@@ -1,0 +1,15 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Aliases
+while IFS='=' read -r key val; do
+        # skip lines with comments
+        [[ ${key##\#*} ]] || continue
+        alias_list+=($key="$val")
+done < "$XDG_CONFIG_HOME"/shell/aliasrc
+alias "${alias_list[@]}"
+unset alias_list

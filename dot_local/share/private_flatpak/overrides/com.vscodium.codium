@@ -1,5 +1,0 @@
-[Context]
-filesystems=xdg-data/gnupg:ro;xdg-config/git;~/Projects;!host
-
-[Environment]
-FLATPAK_ENABLE_SDK_EXT=rust-stable
