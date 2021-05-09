@@ -1,7 +1,7 @@
 #!/bin/sh
 fonts="${XDG_DATA_HOME:-$HOME/.local/share}"/fonts
 mkdir -p "$fonts"
-curl -fsLS https://github.com/microsoft/cascadia-code/releases/download/v2102.25/CascadiaCode-2102.25.zip -o /tmp/fonts.zip
+curl -fsLS https://github.com/microsoft/cascadia-code/releases/download/v2106.17/CascadiaCode-2106.17.zip -o /tmp/fonts.zip
 umask 377
 unzip -p /tmp/fonts.zip ttf/CascadiaCode.ttf>"$fonts/CascadiaCode.ttf"
 rm /tmp/fonts.zip
