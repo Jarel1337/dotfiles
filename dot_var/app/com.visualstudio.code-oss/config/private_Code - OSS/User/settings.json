@@ -12,6 +12,6 @@
     "editor.fontFamily": "SauceCodePro Nerd Font, Droid Sans Mono, monospace",
     "editor.fontLigatures": true,
     "window.zoomLevel": 1,
-    "window.titleBarStyle": "custom",
     "editor.renderWhitespace": "trailing",
+    "window.titleBarStyle": "custom",
 }
