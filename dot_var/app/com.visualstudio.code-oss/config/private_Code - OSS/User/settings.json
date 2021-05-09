@@ -9,7 +9,7 @@
     "workbench.colorTheme": "Solarized Dark",
     "workbench.preferredDarkColorTheme": "Solarized Dark",
     "workbench.preferredLightColorTheme": "Solarized Light",
-    "editor.fontFamily": "SauceCodePro Nerd Font, Droid Sans Mono, monospace",
+    "editor.fontFamily": "'Cascadia Code', monospace",
     "editor.fontLigatures": true,
     "window.zoomLevel": 1,
     "editor.renderWhitespace": "trailing",
