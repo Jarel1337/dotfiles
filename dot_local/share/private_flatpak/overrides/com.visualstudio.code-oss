@@ -1,6 +1,7 @@
 [Context]
 sockets=!ssh-auth
 filesystems=xdg-run/gnupg:ro;xdg-data/gnupg:ro;xdg-config/git:ro;~/Projects;!host
+persistent=.pki;.vscode-oss
 
 [Environment]
 FLATPAK_ENABLE_SDK_EXT=rust-stable
